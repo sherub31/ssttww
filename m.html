@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            animation: fadeIn 1s;
+        }
+
+        .content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s;
+        }
+
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #ff7e5f;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #ff7e5f;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            flex-direction: column;
+            animation: fadeInOverlay 0.5s;
+        }
+
+        .overlay h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            animation: fadeIn 1s;
+        }
+
+        .overlay p {
+            margin-bottom: 30px;
+            font-size: 1.5em;
+        }
+
+        .overlay img {
+            width: 150px; /* Adjust size as needed */
+            margin: 20px 0;
+        }
+
+        .overlay button {
+            background-color: #ff7e5f;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInOverlay {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Will You Marry Me Sonam Wangmo Tshering?</h1>
+            <p id="message">My life would be so much better with YOUUUU</p>
+            <button id="yesButton">Yes!</button>
+            <button id="ofCourseButton">Of course, yes!</button>
+        </div>
+        <div class="overlay" id="overlay">
+            <h2> 💍 </h2>
+            <p>I knew you would say yes!</p>
+            <button id="closeButton">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'flex';
+        });
+
+        document.getElementById('ofCourseButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'flex';
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
